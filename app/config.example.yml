@@ -1,0 +1,7 @@
+mqtt_broker: localhost
+topic: elterm
+device_encoded: ENYXXXXXXX
+device_id: ENYXXXXXXX
+device_pin: XXXX
+timel_server: 46.242.128.17
+timel_port: 88

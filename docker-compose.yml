@@ -1,0 +1,19 @@
+# :vim: ts=2 sw=2
+version: '3.4'
+
+x-logging_config:
+    &logging_config
+    logging:
+        driver: "json-file"
+        options:
+            max-file: "5"
+            max-size: "10m"
+
+services:
+  app:
+    << : *logging_config
+    build:
+      context: ./app/
+    volumes:
+      - ./app/:/app/
+    network_mode: host
