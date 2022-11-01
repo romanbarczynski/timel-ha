@@ -1,0 +1,5 @@
+hist_boiler: 3
+power: '66'
+temp_boiler: 41.0
+temp_room: 20
+hist_room: 0.2

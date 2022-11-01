@@ -12,6 +12,7 @@ x-logging_config:
 services:
   app:
     << : *logging_config
+    restart: unless-stopped
     build:
       context: ./app/
     volumes:

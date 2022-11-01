@@ -5,3 +5,7 @@ device_id: ENYXXXXXXX
 device_pin: XXXX
 timel_server: 46.242.128.17
 timel_port: 88
+temp_out_correction: -1
+temp_room_correction: 0
+temp_precision: 1
+device_power: 12000
