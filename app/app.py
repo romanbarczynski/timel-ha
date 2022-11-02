@@ -1,6 +1,5 @@
 import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
-import json
 import time
 import sys
 import yaml
@@ -8,6 +7,7 @@ import socket
 import json
 import errno
 import threading
+
 
 class DataError(Exception):
     pass
@@ -246,7 +246,7 @@ def on_message(client, userdata, msg):
         return
 
     print(f"RECV: {msg.topic} {msg.payload}")
-    _, param = msg.topic.split('/set/')
+    _, param = msg.topic.split('/set')
     print(f"PARAM: {param}")
 
     t_set = prep_settings()
@@ -269,6 +269,8 @@ def on_message(client, userdata, msg):
                     'ON': 'Still_On',
                     'OFF': 'Stop',
                 }[payload]
+    else:
+        param = param[1:]
 
     with settings_lock:
         settings_changed = False
