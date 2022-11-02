@@ -9,3 +9,4 @@ temp_out_correction: -1
 temp_room_correction: 0
 temp_precision: 1
 device_power: 12000
+setting_mode: slider

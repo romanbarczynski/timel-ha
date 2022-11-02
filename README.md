@@ -22,3 +22,13 @@ Build and run it:
 ```
 docker-compose up -d --build
 ```
+
+
+## Config
+
+You can control how HA UI will display number input:
+```yaml
+setting_mode: slider
+```
+
+Values: `slider` (default) or `box`

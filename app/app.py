@@ -362,6 +362,7 @@ device_id = conf.get('device_id', 'ELTERM')
 device_encoded = conf.get('device_encoded', 'ELTERM')
 device_power = int(conf.get('device_power', 9000))
 device_pin = conf.get('device_pin', 'ZZZZ')
+setting_mode = conf.get('setting_mode', 'slider')
 timel_server = conf.get('timel_server')
 timel_port = conf.get('timel_port')
 temp_out_correction = float(conf.get('temp_out_correction', 0))
@@ -381,6 +382,7 @@ devices = [
         "icon": "mdi:thermometer",
         "min": 5,
         "max": 85,
+        "mode": setting_mode,
     }],
     ['hist_boiler_setting', 'Boiler Hyst.', 'temperature', '°C', {
         "type": "number",
@@ -389,6 +391,7 @@ devices = [
         "icon": "mdi:thermometer",
         "min": 2,
         "max": 6,
+        "mode": setting_mode,
     }],
     ['temp_room_setting', 'Room Target', 'temperature', '°C', {
         "type": "number",
@@ -398,6 +401,7 @@ devices = [
         "min": 5,
         "max": 30,
         "step": 0.5,
+        "mode": setting_mode,
     }],
     ['hist_room_setting', 'Room Hyst.', 'temperature', '°C', {
         "type": "number",
@@ -407,6 +411,7 @@ devices = [
         "min": 0.1,
         "max": 2.0,
         "step": 0.1,
+        "mode": setting_mode,
     }],
     ['power_setting', 'Power %', None, '%', {
         "type": "select",
@@ -417,6 +422,7 @@ devices = [
         ],
         # "delete": True,
         "entity_category": "config",
+        "mode": setting_mode,
     }],
     ['temp_boiler', 'Temperature Boiler', 'temperature', '°C', {"icon": "mdi:thermometer"}],
     ['e_total', 'Total Energy Used', 'energy', 'kWh', {'state_class': 'total_increasing'}],
