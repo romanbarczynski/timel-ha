@@ -468,7 +468,6 @@ while True:
         time.sleep(30)
         timel_sock = connect(timel_server, timel_port)
 
-
     except Exception as e:
         print(f"ERROR: {e}")
         break
